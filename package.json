@@ -1,0 +1,46 @@
+{
+  "name": "pi-session-yank",
+  "version": "0.1.0",
+  "description": "Pi extension that copies assistant/user message text or fenced code blocks from the current session branch to the clipboard",
+  "author": "Keegan <cgngtr5026@hotmail.com> (https://github.com/cgngtr)",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgngtr/pi-session-yank.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cgngtr/pi-session-yank/issues"
+  },
+  "homepage": "https://github.com/cgngtr/pi-session-yank#readme",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "clipboard",
+    "session",
+    "typescript"
+  ],
+  "scripts": {
+    "test": "node --experimental-strip-types tests/yank.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm test && npm run typecheck",
+    "prepublishOnly": "npm run check && npm pack --dry-run"
+  },
+  "files": [
+    "extensions",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@mariozechner/pi-coding-agent": "^0.65.2",
+    "@types/node": "^24.6.0",
+    "typescript": "^5.9.3"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ]
+  }
+}
